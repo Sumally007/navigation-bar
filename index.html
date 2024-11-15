@@ -15,44 +15,79 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body
-    class="bg-[url('./img/header.jpeg')] bg-cover bg-center h-screen text-white"
-  >
-    <header class="bg-[#ffffff30]">
-      <nav class="flex items-center justify-between px-12 h-16 lg:gap-8">
-        <a
-          href="#"
-          class="text-2xl font-bold border-2 px-2 py-1 whitespace-nowrap"
-          >Tailwind Anytime</a
-        >
-        <div
-          class="dropdown-manu absolute -top-full left-0 max-lg:bg-[#ffffff30] w-full flex flex-col gap-6 items-center py-2 text-lg font-bold text-black lg:text-white lg:static lg:flex-row lg:justify-between"
-        >
-          <ul class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-            <li class="hover:text-orange-400">Home</li>
-            <li class="hover:text-orange-400 whitespace-nowrap">
-              Tailwind CSS Tips
-            </li>
-            <li class="hover:text-orange-400">Video</li>
-            <li class="hover:text-orange-400">Blogs</li>
-            <li class="hover:text-orange-400">Courses</li>
-          </ul>
+  <body>
+    <!--navbar content-->
+    <section class="z-20 fixed top-0 left-0 w-full">
+      <nav class="w-full h-16 px-3 text-black font-bold">
+        <div class="w-full h-full mx-auto flex justify-between items-center">
+          <p
+            class="text-2xl font-bold border-2 px-2 py-1 whitespace-nowrap uppercase tracking-widest"
+          >
+            Tailwind Anytime
+          </p>
 
-          <div class="flex flex-col items-center gap-6 lg:flex-row lg:gap-8">
-            <button class="hover:text-orange-400">Login</button>
-            <button
-              class="bg-orange-400 rounded-lg px-2 py-1 whitespace-nowrap"
+          <div
+            class="md:hidden w-8 h-8 flex flex-col justify-between cursor-pointer"
+            id="hamburger"
+          >
+            <!--Hamburger-->
+            <div
+              id="h-s-1"
+              class="w-full h-1 bg-black rounded-full transition duration-500 ease-in-out transform"
+            ></div>
+            <div
+              id="h-s-2"
+              class="w-full h-1 bg-black rounded-full transition duration-500 ease-in-out transform"
+            ></div>
+            <div
+              id="h-s-3"
+              class="w-full h-1 bg-black rounded-full transition duration-500 ease-in-out transform"
+            ></div>
+          </div>
+
+          <div class="-mx-3 md:block hidden">
+            <!--Nav Items-->
+            <a href="#" class="mx-3 transition duration-500 hover:text-gray-200"
+              >Home</a
             >
-              Sing Up
-            </button>
+            <a href="#" class="mx-3 transition duration-500 hover:text-gray-200"
+              >About</a
+            >
+            <a href="#" class="mx-3 transition duration-500 hover:text-gray-200"
+              >Work</a
+            >
+            <a href="#" class="mx-3 transition duration-500 hover:text-gray-200"
+              >Projects</a
+            >
           </div>
         </div>
-
-        <div class="toggle-button lg:hidden">
-          <i class="fa-solid fa-bars fa-lg"></i>
-        </div>
       </nav>
-    </header>
+    </section>
+
+    <section class="z-10 fixed top-0 right-0 h-screen md:hidden">
+      <!--Mobile Sidenav-->
+      <div
+        id="sidenav"
+        class="w-screen max-w-xs bg-green-500 h-full transition duration-500 ease-in-out transform font-bold overflow-y-auto flex flex-col justify-between items-center text-white pt-16 translate-x-full"
+      >
+        <a class="sidenav-items my-20" href="#">Home</a>
+        <a class="sidenav-items my-20" href="#">About</a>
+        <a class="sidenav-items my-20" href="#">Work</a>
+        <a class="sidenav-items my-20" href="#">Projects</a>
+      </div>
+    </section>
+
+    <!--MAIN WEBSITE CONTENT-->
+    <section class="h-screen w-screen absolute top-0 left-0">
+      <img
+        src="/img/header.jpeg"
+        alt="hero image"
+        class="w-full h-full object-cover absolute top-0 left-0"
+      />
+      <div
+        class="absolute top-0 left-0 w-full h-full bg-gray-400 bg-opacity-40"
+      ></div>
+    </section>
 
     <script src="./index.js"></script>
   </body>
